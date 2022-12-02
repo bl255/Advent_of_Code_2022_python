@@ -1,5 +1,5 @@
 input_1 = "input_01.txt"
-input_1 = "test_input.txt"
+# input_1 = "test_input.txt"
 
 calories = []
 elf = []
@@ -24,5 +24,3 @@ print(f"The elf with most calories carried overall \033[4m{max_calories}\033[0m 
 first_3 = sum(sorted((sum(elf) for elf in calories))[-3:])
 print(f"The three elves with most caloric food carried together \033[4m{first_3}\033[0m calories.")
 # for my input: 196804
-
-
