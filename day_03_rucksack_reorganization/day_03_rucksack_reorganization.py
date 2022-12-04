@@ -23,6 +23,3 @@ for ind in range(0, len(rucksacks), 3):
 
 print(number)
 # for my input 2616
-
-
-
