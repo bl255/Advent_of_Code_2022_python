@@ -19,7 +19,6 @@ for line in all_i:
         col_hints += [num for num, let in enumerate(line) if let in digits]
         m_hints += [let for num, let in enumerate(line) if let in digits]
 
-
 all_crates = [[] for hint in col_hints]
 for crate in raw_crates:
     all_crates[col_hints.index(crate[0])].append(crate[1])
@@ -47,4 +46,4 @@ print("".join((crate[0] for crate in all_crates)))
 
 # result task 2:
 print("".join((crate[0] for crate in better_crates)))
-# for my input TLFGBZHCN
+# for my input QRQFHFWCL
