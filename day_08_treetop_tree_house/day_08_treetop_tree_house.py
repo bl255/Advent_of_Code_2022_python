@@ -7,39 +7,26 @@ with open(input_1, mode="r") as text_file:
     forest = np.array([list(map(int, line)) for line in text_file.read().splitlines()])
 
 
-# TASK 1
+def seen_trees(num, array):
+    if np.array(array >= num).any():
+        return int(np.argwhere(array >= num)[0]) + 1
+    return array.size
 
-check_hidden = np.zeros(forest.shape, dtype=int)
+
+visible_trees = np.zeros(forest.shape, dtype=int) + 1  # at the beginning filled with 1, border trees are visible
+sum_seen_trees = np.zeros(forest.shape, dtype=int)
+
+# the following solution would not work if border points are considered, because of empty arrays
 
 for x in range(1, forest.shape[0] - 1):
-    for y in range(1, forest.shape[1] - 1):
-        check_hidden[x, y] = all([forest[x, y] <= max(forest[:x, y]),
-                                  forest[x, y] <= max(forest[x + 1:, y]),
-                                  forest[x, y] <= max(forest[x, :y]),
-                                  forest[x, y] <= max(forest[x, y + 1:])])
-
-
-print(forest.shape[0] * forest.shape[1] - check_hidden.sum())  # my input 1851
-
-
-# TASK 2
-
-def np_see_trees(num, array):
-    rule = num <= array
-    if array.shape[0] == 0:
-        return 0
-    else:
-        if np.argmax(rule) == 0 and num > max(array):
-            return array.shape[0]
-        return np.argmax(rule) + 1
-
-
-check_see_trees = np.zeros(forest.shape, dtype=int)
-
-for x in range(forest.shape[0]):
-    for y in range(forest.shape[1]):
+    for y in range(1, forest.shape[0] - 1):
         u, l, d, r = forest[:x, y][::-1], forest[x, :y][::-1], forest[x + 1:, y], forest[x, y + 1:]
-        check_see_trees[x, y] = np_see_trees(forest[x, y], u) * np_see_trees(forest[x, y], l) *\
-            np_see_trees(forest[x, y], d) * np_see_trees(forest[x, y], r)
+        visible_trees[x, y] = any([forest[x, y] > max(u), forest[x, y] > max(l),
+                                  forest[x, y] > max(d), forest[x, y] > max(r)])
 
-print(np.amax(check_see_trees))
+        sum_seen_trees[x, y] = seen_trees(forest[x, y], u) * seen_trees(forest[x, y], l) *\
+            seen_trees(forest[x, y], d) * seen_trees(forest[x, y], r)
+
+
+print(visible_trees.sum())  # task 1, for my input 1851
+print(np.amax(sum_seen_trees))  # task 2, for my input 574080
