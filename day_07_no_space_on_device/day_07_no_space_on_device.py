@@ -85,4 +85,3 @@ need_to_add = need - have_free
 
 print(sum([value for value in my_device.sum_vals if value <= 100000]))  # my input 1501149
 print(min([val for val in my_device.sum_vals if val >= need_to_add]))  # my input 10096985
-
