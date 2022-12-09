@@ -2,8 +2,7 @@
 
 venv/
 .idea/
+no_git/
 
 notes.txt
 main.py
-archiv.py
-test.py
