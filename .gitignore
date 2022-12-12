@@ -3,8 +3,10 @@
 venv/
 .idea/
 no_git/
+inputs_2022/
 
 notes.txt
 main.py
 
 input_11.txt
+
