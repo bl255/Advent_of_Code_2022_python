@@ -5,11 +5,6 @@ venv/
 no_git/
 inputs_2022/
 
-
-day_12_hill_climbing_algorithm/
-day_13_distress_signal/
-day_14_regolit_reservoir/
-
 notes.txt
 main.py
 
