@@ -1,7 +1,7 @@
 import numpy as np
 
-input_1 = "input_08.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_08.txt"
+input_1 = "test_input.txt"
 
 with open(input_1, mode="r") as text_file:
     forest = np.array([list(map(int, line)) for line in text_file.read().splitlines()])
@@ -27,5 +27,5 @@ for x in range(1, forest.shape[0] - 1):
                 seen_trees(forest[x, y], d) * seen_trees(forest[x, y], r)
 
 
-print(visible_trees.sum())  # task 1, for my input 1851
-print(np.amax(sum_seen_from_visible))  # task 2, for my input 574080
+print(visible_trees.sum())  # task 1, for test input 21
+print(np.amax(sum_seen_from_visible))  # task 2, for test input 8

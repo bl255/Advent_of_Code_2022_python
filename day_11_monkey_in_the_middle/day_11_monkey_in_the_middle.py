@@ -86,7 +86,7 @@ for _ in range(20):
         mo.one_monkey_operation(monkeys, worry_relief=True)
 
 inspections = sorted([mo.inspection_count for mo in monkeys], reverse=True)
-print(inspections[0] * inspections[1])  # for test input 76728
+print(inspections[0] * inspections[1])  # for test input 10605
 
 Monkeys.reset_worry()
 

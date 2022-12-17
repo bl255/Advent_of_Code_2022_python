@@ -1,7 +1,7 @@
 import numpy as np
 
-input_1 = "input_02.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_02.txt"
+input_1 = "test_input.txt"
 
 # A = 1, B = 2, C = 3
 # A > B, B > C, C > A
@@ -44,8 +44,8 @@ combined_choices_2 = np.core.defchararray.add(elf, you)
 scores_2 = np.vectorize(RULES_2.__getitem__)(combined_choices_2)
 
 
-print(f"Task 1: {sum(scores)}")  # result for my input 12156
-print(f"Task 2: {sum(scores_2)}")  # result for my input 10835
+print(f"Task 1: {sum(scores)}")  # result for test input 15
+print(f"Task 2: {sum(scores_2)}")  # result for test input 12
 
 # IMPORTANT NOTE: this code could be improved by getting match values in the form of "AX", and then applying vectorized
 # directly on the match array, choosing the appropriate dictionary, but because of gradual evolution of the script

@@ -1,5 +1,5 @@
-input_1 = "input_09.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_09.txt"
+input_1 = "test_input.txt"
 
 
 def proximity(position):
@@ -82,5 +82,5 @@ for i_move in rope_moves:
     short_rope.update_rope(i_move)
     long_rope.update_rope(i_move)
 
-print(len(short_rope.tail_visited))  # task 1, for my input 5513
-print(len(long_rope.tail_visited))  # task 2, for my input 2427
+print(len(short_rope.tail_visited))  # task 1, for test input 13
+print(len(long_rope.tail_visited))  # task 2, for test input 1

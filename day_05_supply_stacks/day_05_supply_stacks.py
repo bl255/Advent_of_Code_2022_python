@@ -2,8 +2,8 @@ from string import ascii_uppercase, digits
 import copy
 import re
 
-input_1 = "input_05.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_05.txt"
+input_1 = "test_input.txt"
 
 with open(input_1, mode="r") as text_file:
     all_i = (line for line in text_file.read().splitlines())
@@ -42,8 +42,8 @@ for line in all_i:
 
 # result task 1:
 print("".join((crate[0] for crate in all_crates)))
-# for my input TLFGBZHCN
+# for my input CMZ
 
 # result task 2:
 print("".join((crate[0] for crate in better_crates)))
-# for my input QRQFHFWCL
+# for my input MCD

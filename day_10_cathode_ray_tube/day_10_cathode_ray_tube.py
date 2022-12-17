@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-input_1 = "input_10.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_10.txt"
+input_1 = "test_input.txt"
 
 with open(input_1, mode="r") as text_file:
     signal = (line for line in text_file.read().splitlines())
@@ -22,7 +22,7 @@ for line in signal:
         cycle += 1
         state_sum += int(line.split()[1])
 
-print(sum(states[position] * position for position in (20, 60, 100, 140, 180, 220)))  # task1, for my input 16880
+print(sum(states[position] * position for position in (20, 60, 100, 140, 180, 220)))  # task1, test input 13140
 
 # CONTINUING WITH TASK 2
 row_pos = 0
@@ -52,4 +52,13 @@ img = plt.imshow(for_print, cmap="Greys")
 ax = plt.gca()
 plt.axis("off")
 
-plt.show()  # task 2, for my input RKAZAJBR
+plt.show()  # task 2
+
+test_output = """
+##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....
+"""

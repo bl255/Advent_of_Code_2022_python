@@ -12,5 +12,5 @@ def first_unique_sequence(num_unq, signal=whole_signal):
     return None
 
 
-print(first_unique_sequence(4))  # for my input 1757
-print(first_unique_sequence(14))  # for my input 2950
+print(first_unique_sequence(4))  # for test input 7
+print(first_unique_sequence(14))  # for test input 19

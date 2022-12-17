@@ -1,5 +1,5 @@
-input_1 = "input_07.txt"
-# input_1 = "test_input.txt"
+# input_1 = "input_07.txt"
+input_1 = "test_input.txt"
 
 
 class Structure:
@@ -83,5 +83,5 @@ taken = max(my_device.sum_vals)
 have_free = total_size - taken
 need_to_add = need - have_free
 
-print(sum([value for value in my_device.sum_vals if value <= 100000]))  # my input 1501149
-print(min([val for val in my_device.sum_vals if val >= need_to_add]))  # my input 10096985
+print(sum([value for value in my_device.sum_vals if value <= 100000]))  # for test input 95437
+print(min([val for val in my_device.sum_vals if val >= need_to_add]))  # for test input 24933642
