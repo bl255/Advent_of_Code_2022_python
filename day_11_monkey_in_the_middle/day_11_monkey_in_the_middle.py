@@ -88,9 +88,7 @@ for _ in range(20):
 inspections = sorted([mo.inspection_count for mo in monkeys], reverse=True)
 print(inspections[0] * inspections[1])  # for test input 76728
 
-
 Monkeys.reset_worry()
-
 
 # # TASK 2
 for _ in range(10000):
